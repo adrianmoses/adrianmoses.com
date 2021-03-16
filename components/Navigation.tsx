@@ -1,4 +1,7 @@
 import styled from 'styled-components';
+import Link from 'next/link'
+import userbase from 'userbase-js'
+import { UserProps } from './types';
 
 const NavigationBar = styled.div`
   display: flex;
@@ -20,16 +23,47 @@ const NavigationLinks = styled.ul`
 
   & > li {
     margin-left: 12px;
+    cursor: pointer;
   }
 `
 
-export default function Navigation() {
+export default function Navigation({ user }: UserProps) {
+
+  const handleLogOut = async () => {
+    await userbase.signOut();
+  }
+
   return (
     <NavigationBar>
-      <Brand>Virtus</Brand>
+      <Brand>
+        <Link href="/">
+          Virtus
+        </Link>
+      </Brand>
       <NavigationLinks>
-        <li>Sign In</li>
-        <li>Sign Up</li>
+        { user ? (
+          <>
+            <li>
+                <a onClick={handleLogOut}>Log Out</a>
+            </li>
+          </>
+        ) : (
+          <>
+            <li>
+              <Link href="/log-in">
+                <a>
+                  Log In
+                </a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/sign-up">
+                Sign Up
+              </Link>
+            </li>
+          </>
+        )
+      }
       </NavigationLinks>
     </NavigationBar>
   );
