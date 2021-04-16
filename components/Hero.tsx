@@ -1,27 +1,27 @@
 import Image from 'next/image';
-import styled from 'styled-components';
+import tw from 'twin.macro';
 
-const HeroDiv = styled.div`
-  width: 60%;
-  display: inline-flex;
-  justify-content: space-evenly;
+const HeroDiv = tw.div`
+  w-7/12
+  inline-flex
+  justify-evenly
+  items-center
+  px-2
+  py-8
+  flex-1
 `
 
-const HeroMessage = styled.div`
-  display: flex;
-  flex-direction: column;
+const HeroMessage = tw.div`
+  flex
+  flex-col
+  justify-start
 `
 
 export default function Hero() {
   return (
     <HeroDiv>
-      <Image 
-        src="/wes-hicks-nature.jpg"
-        width={200}
-        height={300}
-      />
       <HeroMessage>
-        <h3>Find Your Center.</h3>
+        <h3 tw={"text-xl font-semibold mb-6"}>Find Your Center</h3>
         <span>Unlock Your Potential</span>
       </HeroMessage>
     </HeroDiv>
