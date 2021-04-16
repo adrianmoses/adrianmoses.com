@@ -1,7 +1,7 @@
 import tw, { styled } from 'twin.macro';
 import { getAllPosts } from '../lib/api';
-import { format, parseISO } from 'date-fns';
 import Link from 'next/link'
+import { DateFormatter } from '../components/DateFormatter';
 
 const Main = tw.main`
   mb-auto
@@ -122,10 +122,6 @@ const DescDetail = tw.dd`
   text-gray-400
 `
 
-function DateFormatter({ dateString }) {
-  const date = parseISO(dateString)
-  return <time dateTime={dateString}>{format(date, 'LLLL	d, yyyy')}</time>
-}
 
 export default function Home({ allPosts }) {
   return (
@@ -153,7 +149,9 @@ export default function Home({ allPosts }) {
                       <PostInfoDetails>
                         <PostInfoHeader>
                           <PostHeader>
-                            <PostHeaderLink>{post.title}</PostHeaderLink>
+                            <Link href={`/posts/${post.slug}`}>
+                              <PostHeaderLink>{post.title}</PostHeaderLink>
+                            </Link>
                           </PostHeader>
                           <PostInfoTags>
                             {post.tags.map((tag, idx) => (
