@@ -8,6 +8,10 @@ export default function Post({ post, morePosts, preview }) {
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
   }
+
+  return (
+    <div>{post.title}</div>
+  )
 }
 
 export async function getStaticProps({ params }) {

@@ -128,7 +128,6 @@ function DateFormatter({ dateString }) {
 }
 
 export default function Home({ allPosts }) {
-  console.log(allPosts);
   return (
     <Main>
       <MainContainer>
@@ -137,9 +136,9 @@ export default function Home({ allPosts }) {
           <SubHeading>Thoughts on how to live the life you want</SubHeading>
         </HeadingSection>
         <Posts>
-          {allPosts.map(post => {
+          {allPosts.map((post, pidx) => {
             return (
-              <PostItem>
+              <PostItem key={pidx}>
                 <PostArticle>
                   <PostGrid>
                     <DescList>
@@ -157,15 +156,15 @@ export default function Home({ allPosts }) {
                             <PostHeaderLink>{post.title}</PostHeaderLink>
                           </PostHeader>
                           <PostInfoTags>
-                            {post.tags.map(tag => (
-                              <PostTag>{tag}</PostTag>
+                            {post.tags.map((tag, idx) => (
+                              <PostTag key={idx}>{tag}</PostTag>
                             ))}
                           </PostInfoTags>
                         </PostInfoHeader>
                         <PostSummary>{post.excerpt}</PostSummary>
                       </PostInfoDetails>
                       <PostReadMore>
-                        <Link href={"/posts/${post.slug}"} >
+                        <Link href={`/posts/${post.slug}`} >
                           <ReadMoreLink>
                             Read More -&gt;
                           </ReadMoreLink>
