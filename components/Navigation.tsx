@@ -39,9 +39,9 @@ export default function Navigation() {
       <NavigationLinks>
         <>
           <NavigationLink>
-            <Link href="/how-to-start">
+            {/* <Link href="/how-to-start">
               How To Start
-            </Link>
+            </Link> */}
           </NavigationLink>
         </>
       </NavigationLinks>

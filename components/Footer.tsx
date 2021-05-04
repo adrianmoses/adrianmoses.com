@@ -8,7 +8,7 @@ const FooterDiv = tw.div`
   flex
   justify-center
   items-center
-  h-16
+  h-24
 `
 
 export default function Footer() {
