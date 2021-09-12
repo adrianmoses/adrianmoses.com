@@ -29,7 +29,7 @@ const IndexPage = () => (
           side projects
         </a>{" "}
         or sharing{" "}
-        <a target="_blank" href="https://thrust.ml">
+        <a target="_blank" href="https://typeshare.co/g/adrianmoses">
           knowledge about machine learning
         </a>
         .
