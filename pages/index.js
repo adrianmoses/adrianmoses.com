@@ -19,9 +19,24 @@ export default function Home({ posts }) {
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
+      <div className="w-2/3 mx-auto py-8">
+        <div className="flex flex-col content-center">
+          <p className="text-lg">Hi, I'm Adrian Moses.</p>
+          <p className="text-lg">
+            I push code to <a href="//github.com/adrianmoses">github</a> and post words on{' '}
+            <a href="//twitter.com/marsmoses">twitter</a>.
+          </p>
+          <p className="text-lg">
+            I'm often building side projects or sharing knowledge about machine learning.
+          </p>
+          <p className="text-lg">
+            I'm also writing songs and making music. If you want to hear about it, keep in touch.
+          </p>
+        </div>
+      </div>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="pt-6 pb-8 space-y-2 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+          <h1 className="text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             Latest
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">

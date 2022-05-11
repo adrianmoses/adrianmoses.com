@@ -1,7 +1,7 @@
 const projectsData = [
   {
-    title: 'Virtus',
-    description: `digital tools for managing mental health`,
+    title: 'Adrian Moses',
+    description: `building and learning`,
     imgSrc: '/static/images/google.png',
     href: 'https://www.google.com',
   },
