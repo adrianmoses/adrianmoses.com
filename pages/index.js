@@ -23,11 +23,27 @@ export default function Home({ posts }) {
         <div className="flex flex-col content-center">
           <p className="text-lg">Hi, I'm Adrian Moses.</p>
           <p className="text-lg">
-            I push code to <a href="//github.com/adrianmoses">github</a> and post words on{' '}
-            <a href="//twitter.com/marsmoses">twitter</a>.
+            I push code to{' '}
+            <span className="font-bold">
+              <a href="//github.com/adrianmoses">github</a>
+            </span>{' '}
+            and post words on{' '}
+            <span className="font-bold">
+              <a href="//twitter.com/marsmoses">twitter</a>
+            </span>
+            .
           </p>
           <p className="text-lg">
-            I'm often building side projects or sharing knowledge about machine learning.
+            I'm often{' '}
+            <span className="font-bold">
+              <Link href="/projects">building side projects</Link>
+            </span>{' '}
+            or{' '}
+            <span className="font-bold">
+              <a href="//https://typeshare.co/adrianmoses">
+                sharing knowledge about machine learning.
+              </a>
+            </span>
           </p>
           <p className="text-lg">
             I'm also writing songs and making music. If you want to hear about it, keep in touch.
