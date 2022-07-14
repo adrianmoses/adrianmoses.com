@@ -16,7 +16,14 @@ const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
         method="post"
         action="https://tinyletter.com/adrianmoses"
         target="popupwindow"
-        onSubmit="window.open('https://tinyletter.com/adrianmoses', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"
+        onSubmit={() => {
+          window.open(
+            'https://tinyletter.com/adrianmoses',
+            'popupwindow',
+            'scrollbars=yes,width=800,height=600'
+          )
+          return true
+        }}
       >
         <div>
           <label className="sr-only" htmlFor="email-input">

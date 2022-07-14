@@ -34,15 +34,13 @@ export default function Home({ posts }) {
             .
           </p>
           <p className="text-lg">
-            I'm often{' '}
+            I am often{' '}
             <span className="font-bold">
               <Link href="/projects">building side projects</Link>
             </span>{' '}
             or{' '}
             <span className="font-bold">
-              <a href="//https://typeshare.co/adrianmoses">
-                sharing knowledge about machine learning.
-              </a>
+              <a href="//https://typeshare.co/adrianmoses">sharing what I've learned.</a>
             </span>
           </p>
           <p className="text-lg">
