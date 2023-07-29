@@ -6,4 +6,4 @@ draft: false
 summary: check out articles on thrust
 ---
 
-I’m writing about side projects, solo dev and AI here at
+I’m writing about side projects, solo dev and AI here at [Thrust](https://thrust.dev/articles)
